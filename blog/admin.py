@@ -8,6 +8,7 @@ from blog.models import Tag, Post
 
 class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
+    list_display = ('slug', 'published_at') # Changing slug and published_at to display as a list
 
 
 # Here we’re setting just one attribute, prepopulated_fields. When used in this way, some JavaScript is inserted into the admin page so that 
